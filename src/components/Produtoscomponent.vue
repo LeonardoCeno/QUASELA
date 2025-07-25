@@ -144,7 +144,7 @@ function alternarOfertas() {
     position: relative;
     height: 50px;
     width: 159px;
-    border: 1px solid #e4e4e4;
+    border: 1px solid #e2e2e2;
     border-top: 2px solid white;
     margin-bottom: 40px;
     z-index: 1000;
@@ -256,7 +256,7 @@ function alternarOfertas() {
 }
 
 .add button:hover {
-    background-color: #02060ade;
+    background-color: #02060ac2;
 }
 
 .add button p {
@@ -277,7 +277,7 @@ function alternarOfertas() {
 }
 
 .add img:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .produto {
@@ -298,7 +298,7 @@ function alternarOfertas() {
 }
 
 .produto:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.116);
 }
 
 .produto h4 {
@@ -316,12 +316,13 @@ function alternarOfertas() {
     padding: 4px;
     position: relative;
     gap: 10px;
-    border: 1px solid #ebebeb;
+    border: 1px solid #e2e2e2;
     border-top: none;
+    background-color: white;
 }
 
 .mostrar-mais:hover {
-    background-color: #02060ace;
+    background-color: #02060acc;
     text-decoration: underline;
 }
 
@@ -329,7 +330,7 @@ function alternarOfertas() {
     width: 100%;
     max-width: 1250px;
     height: 1px;
-    background-color: #888888;
+    background-color: #838383;
     margin: 0 auto;
 }
 

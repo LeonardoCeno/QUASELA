@@ -3,7 +3,8 @@
 <div class="divisoria" ></div>
 <div class="Tudo">
     <div class="menuesquerdo" >
-        <router-link to="/dados"> <button>Meus dados</button></router-link>
+        <h2> <span class="h2fake" > Olá, {{ usuario.name }}</span> 👋 </h2>
+        <router-link id="primeiro" to="/dados"> <button>Meus dados</button></router-link>
         <router-link to="/carrinho"> <button>Carrinho</button></router-link>
         <router-link to="/favoritos"> <button>Favoritos</button></router-link>
         <router-link to="/pedidos"> <button>Pedidos</button></router-link>
@@ -31,6 +32,7 @@ import Footer from '../components/Footercomponent.vue'
 import { ref, onMounted } from 'vue'
 import api from '../services/api'
 
+const usuario = ref({})
 const userRole = ref(null)
 
 onMounted(async () => {
@@ -39,6 +41,7 @@ onMounted(async () => {
         if (token) {
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`
             const { data } = await api.get('/users/me')
+            usuario.value = data
             userRole.value = data.role
         }
     } catch (e) {
@@ -51,7 +54,7 @@ onMounted(async () => {
 
 .divisoria{
     width: 100%;
-    height: 25px;
+    height: 15px;
     background-color: #06080afa;
 }
 
@@ -59,15 +62,27 @@ onMounted(async () => {
     display: flex;
     width: 100%;
     height: 100vh;
+    padding: 20px;
 }
 
 .menuesquerdo{
-    width: 17%;
+    width: 18%;
     height: 100%;
     background-color: #06080afa;
     border: px solid white;
     min-width: 120px;
     z-index: 10;
+    border-radius: 12px 0 0 12px;
+}
+
+.menuesquerdo h2 {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.h2fake {
+    text-decoration: underline;
 }
 
 .menuesquerdo h3{
@@ -75,7 +90,7 @@ onMounted(async () => {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     text-decoration: underline;
 }
 
@@ -87,20 +102,26 @@ onMounted(async () => {
     font-size: 1rem;
 }
 
+#primeiro button {
+    border-radius: 12px 0 0 0;
+}
+
 .menuesquerdo button:hover{
     transition: 0.1s;
-    background-color: #dbdbdb;
+    background-color: #eeeeee;
     color: #000000;
 }
 
+
 .menudireito{
-    width: 88%;
-    height: 100vh;
+    width: 77%;
+    height: 100%;
     background-color: #ffffff;
+    border: 1px solid black;
 }
 
 .admin button{
-    color: #80a2ff;
+    color: #00b7ff;
 }
 
 </style>

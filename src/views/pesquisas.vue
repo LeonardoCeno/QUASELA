@@ -429,6 +429,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     position: relative;
     gap: 10px;
     width: 100%;
+    border: 1px solid rgba(224, 224, 224, 0.507);
 }
 
 .produto2 {
@@ -437,7 +438,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
 }
 
 .produto2:hover {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.13);
 }
 
 .nome-preco-imagem2 {
@@ -499,7 +500,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
 
 .inputpesquisa h2 {
     font-size: 2.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
     color: #353535;
 }
@@ -666,7 +667,9 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     padding: 4px;
     position: relative;
     gap: 10px;
+    padding-bottom: 25px;
     width: 100%;
+    border: 1px solid rgba(224, 224, 224, 0.507);
 }
 
 .produto {
@@ -675,7 +678,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     justify-content: space-between;
     text-align: center;
     width: 230px;
-    height: 95%;
+    height: 94%;
     margin-top: 3vh;
     padding-left: 10px;
     padding-right: 10px;
@@ -789,5 +792,22 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     margin-top: 20px;
     font-size: 1.1rem;
 }
+
+@media (max-width: 1200px) {
+    .lista-pesquisa {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 950px) {
+    .lista-pesquisa {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .lista-pesquisa {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 </style>

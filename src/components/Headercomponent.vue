@@ -254,7 +254,6 @@ function irParaOfertas() {
 function irParaMangás() {
     router.push({ path: '/pesquisas', query: { categoriaId: 318 } })
 }
-
 // aqui criei um "genérico" pras categorias dentro da div que abre quando voce passa o mouse em cima da "Categorias" do header
 // nao repliquei em todas pra que o Categorias (falo da div toda) fique fixo, e pra funções futuras
 function irParaCategoria(id) {

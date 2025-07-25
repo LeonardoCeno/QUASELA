@@ -288,6 +288,7 @@ async function carregarProdutos() {
 </script>
 
 <style scoped>
+
 .tudo {
     display: flex;
     flex-direction: column;
@@ -298,7 +299,7 @@ async function carregarProdutos() {
 }
 
 .produtos {
-  width: 72vw;
+  width: 95%;
   height: 30%;
 }
 
@@ -312,9 +313,11 @@ async function carregarProdutos() {
   cursor: pointer;
   align-self: flex-start;
 }
+
 .novo-produto-btn:hover {
   background-color: #45a049;
 }
+
 .criacao-form-wrapper {
   display: flex;
   justify-content: center;
@@ -328,6 +331,7 @@ async function carregarProdutos() {
   z-index: 1000;
   overflow: auto;
 }
+
 .criacao-form {
   background-color: #fff;
   padding: 32px 24px;
@@ -342,17 +346,20 @@ async function carregarProdutos() {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .criacao-form h2 {
   font-size: 2.5rem;
   font-family: helvetica;
   margin-bottom: 20px;
 }
+
 .criacao-form label {
   display: block;
   margin-bottom: 10px;
   font-size: 1.1rem;
   font-weight: bold;
 }
+
 .criacao-form input[type="text"],
 .criacao-form textarea,
 .criacao-form input[type="file"],
@@ -365,6 +372,7 @@ async function carregarProdutos() {
   border-radius: 5px;
   font-size: 1rem;
 }
+
 .criacao-form button {
   background-color: #4CAF50;
   color: white;
@@ -375,28 +383,34 @@ async function carregarProdutos() {
   font-size: 1.1rem;
   margin-right: 10px;
 }
+
 .criacao-form button:last-child {
   background-color: #f44336;
 }
+
 .criacao-form button:last-child:hover {
   background-color: #da190b;
 }
+
 .criacao-form form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
 .criacao-form form button {
   margin-right: 10px;
   margin-bottom: 0;
 }
+
 .produtos-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgb(167, 167, 167);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(167, 167, 167);
 }
+
 .produtos-header h3 {
   font-size: 2.5rem;
   font-family: helvetica;
@@ -408,7 +422,9 @@ ul {
   list-style: none;
   max-height: 70vh;
   overflow-y: auto;
+  scrollbar-color: rgb(100, 100, 100) rgba(241, 241, 241, 0.527);
 }
+
 li {
   background-color: #f0f0f0;
   padding: 15px;
@@ -420,10 +436,12 @@ li {
   font-size: 1.1rem;
   border: 1px solid #a9b5b6;
 }
+
 .BTli {
   display: flex;
   gap: 1vw;
 }
+
 .excluir-btn {
   background-color: #dc3545 !important;
   color: white !important;
@@ -434,9 +452,11 @@ li {
   font-size: 0.9rem;
   margin-left: 10px;
 }
+
 .excluir-btn:hover {
   background-color: #b71c1c !important;
 }
+
 .BTli button {
   background-color: #6c757d;
   color: white;
@@ -447,46 +467,47 @@ li {
   font-size: 0.9rem;
   margin-left: 10px;
 }
+
 .BTli button:hover {
   background-color: #5a6268;
 }
+
 .linha-dupla {
   display: flex;
   gap: 16px;
 }
+
 .campo-metade {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .filtro-categorias {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .filtro-categorias select {
   padding: 6px 10px;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
-  .filtro-categorias {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-  }
-}
+
 .nome-preco-imagem {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .nome-preco-imagem p {
   font-size: 22px;
   color: rgb(49, 49, 49);
   font-weight: bold;
 }
+
 .nome-preco-imagem img {
   margin-top: 10px;
   height: 225px;
@@ -494,6 +515,7 @@ li {
   border: 0.1px solid rgb(212, 212, 212);
   filter: contrast(100%);
 }
+
 .produto {
   display: flex;
   flex-direction: column;
@@ -505,13 +527,16 @@ li {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .produto:hover .add {
   opacity: 1;
   pointer-events: auto;
 }
+
 .produto:hover {
   background-color: rgb(209, 209, 209);
 }
+
 .produto h4 {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
@@ -519,6 +544,7 @@ li {
   margin-top: 10px;
   height: 40px;
 }
+
 .lista {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -531,6 +557,14 @@ li {
 @media (max-width: 800px) {
   .lista {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filtro-categorias {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
   }
 }
 

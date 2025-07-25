@@ -169,7 +169,7 @@ onUnmounted(() => {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    background-color: rgba(240, 240, 240, 0.438);
+    background-color: rgba(240, 240, 240, 0.377);
     height: 45vh;
     min-height: 300px;
     width: 100%;
@@ -257,7 +257,7 @@ onUnmounted(() => {
     align-items: center;
     position: relative;
     right: 5px;
-    bottom: 1rem;
+    bottom: 1.6rem;
 }
 
 .indicator {

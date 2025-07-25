@@ -32,6 +32,7 @@ export async function register(name, email, password) {
   return response.data
 }
 
+// informações do usuario
 export async function getUsuario() {
   const response = await api.get('/users/me')
   return response.data

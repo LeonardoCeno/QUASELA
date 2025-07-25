@@ -312,7 +312,7 @@ function abrirCriacao() {
 }
 
 .categorias {
-    width: 72vw;
+    width: 94%;
     height: 30%;
 }
 
