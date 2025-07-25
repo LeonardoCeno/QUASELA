@@ -441,6 +441,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     justify-content: center;
     flex-direction: column;
     padding: 40px;
+    padding-bottom: 10px;
     padding-left: 50px;
     position: relative;
     gap: 10px;
