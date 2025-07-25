@@ -104,10 +104,7 @@
                 <img src="../components/img/listafinal.png" alt=""> <p>Categorias</p>
             </button>
             <div v-if="showCategoriasDropdown" class="categorias-dropdown-menu">
-                <div
-                    v-for="cat in categorias"
-                    :key="cat.id"
-                    class="alinhando-categorias">
+                <div v-for="cat in categorias" :key="cat.id">
                     <button @click="irParaCategoria(cat.id)"> {{ cat.name }} </button>
                 </div>
                 <button @click="irParaPesquisas">Tudo</button>
@@ -518,7 +515,6 @@ button:hover img {
 }
 .conta-dropdown-menu button:hover {
     color: #079ac7;
-    transition: color 0.2s;
 }
 
 .categorias-dropdown-menu {
@@ -542,11 +538,13 @@ button:hover img {
     width: 200px;
     font-size: 15px;
     cursor: pointer;
-    transition: background 0.2s;
+    border-radius: 0px;
 }
 .categorias-dropdown-menu button:hover {
     color: #079ac7;
-    transition: 0.1s;
+    transition: 0s;
+    border-top: 0.5px solid grey;
+    border-bottom: 0.5px solid grey;
 }
 
 .autocomplete-sugestoes {

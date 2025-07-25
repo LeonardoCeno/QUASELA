@@ -703,8 +703,8 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    width: 230px;
-    height: 94%;
+    width: 240px;
+    height: 96%;
     margin-top: 3vh;
     padding-left: 10px;
     padding-right: 10px;
@@ -725,14 +725,14 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
 
 .nome-preco-imagem img {
     margin-top: 10px;
-    height: 235px;
-    width: 167px;
+    height: 268px;
+    width: 187px;
     border: 0.1px solid rgb(212, 212, 212);
     filter: contrast(100%);
 }
 
 .nome-preco-imagem .disponivel-selo {
-    width: 95px;
+    width: 105px;
     height: auto;
     border: none;
     position: absolute;
@@ -778,7 +778,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     filter: invert(1);
 }
 .add img {
-    width: 20px;
+    width: 24px;
     height: auto;
     filter: invert(6%) sepia(50%) saturate(200%) hue-rotate(160deg) brightness(100%) contrast(100%);
 }
