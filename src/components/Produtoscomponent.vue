@@ -38,7 +38,7 @@
 </div>
 <div id="cord" class="titulo" >
     <div class="linebranca" ></div>
-<h3>LIVROS</h3>
+<h3>OFERTAS</h3>
 <div class="linebranca" ></div>
 </div>
 <div class="soumdetalhe"></div>
