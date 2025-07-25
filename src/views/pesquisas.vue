@@ -91,8 +91,8 @@
     <div class="conteudos" >
         <div class="Header-conteudos" >
             <div class="header-conteudos-left">
-                <button @click="toggleModo2" class="header-btn-quadrado"><img src="../components/img/MODOV6-Photoroom.png" alt=""></button>
-                <button @click="toggleModo" class="header-btn-quadrado"><img src="../components/img/MODOV7-Photoroom.png" alt=""></button>
+                <button ref="btn2" @click="toggleModo2" class="header-btn-quadrado"  ><img src="../components/img/img1111.png" alt=""></button>
+                <button ref="btn1" @click="toggleModo" class="header-btn-quadrado" ><img src="../components/img/img2222.png" alt=""></button>
             </div>
             <div class="header-conteudos-right">
                 <label for="filtroOrdem" class="header-label">Ordenar por:</label>
@@ -177,6 +177,8 @@ const erro = ref('')
 const route = useRoute()
 const termoBusca = ref('')
 const isLancamentos = ref(false)
+const btn1 = ref(null)
+const btn2 = ref(null)
 
 const categoriaSelecionadaId = computed(() => Number(route.query.categoriaId) || null)
 
@@ -192,10 +194,24 @@ const ordenarPorMaisRecentes = ref(false)
 
 const toggleModo = () => {
     modoum.value = true;
+    btn1.value.style.filter = 'brightness(0.9)'
+    btn2.value.style.filter = 'brightness(1.2)'
 }
 const toggleModo2 = () => {
     modoum.value = false;
+    btn1.value.style.filter = 'brightness(1.2)'
+    btn2.value.style.filter = 'brightness(0.9)'
 }
+
+onMounted(() => {
+    if (modoum.value) {
+        btn1.value.style.filter = 'brightness(0.9)'
+        btn2.value.style.filter = 'brightness(1.2)'
+    } else {
+        btn1.value.style.filter = 'brightness(1.2)'
+        btn2.value.style.filter = 'brightness(0.9)'
+    }
+})
 
 // Estado reativo pro filtro de preço
 const precoSelecionado = ref('')
@@ -495,11 +511,10 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     justify-content: center;
     width: 100%;
     height: 15vh;
-    background-color: #fffffffa;
 }
 
 .inputpesquisa h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-family: sans-serif;
     font-weight: bold;
     color: #353535;
@@ -536,12 +551,14 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     width: 100%;
     align-items: center;
 }
+
 .filtro-bloco {
-    width: 100%;
+    width: 99%;
     border: 1px solid #a3a3a3;
     border-radius: 7px;
     padding: 7px;
 }
+
 .filtro-btn {
     display: flex;
     align-items: center;
@@ -558,14 +575,17 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .filtro-btn img {
     width: 20px;
     height: 17px;
     filter: invert(1);
 }
+
 .filtro-btn:hover {
     background: #1a2633;
 }
+
 .filtro-conteudo {
     width: 100%;
     color: #222;
@@ -575,6 +595,7 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     z-index: 1;
     position: relative;
 }
+
 .filtro-conteudo input[type="checkbox"] {
     width: 22px;
     height: 22px;
@@ -604,24 +625,25 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
     justify-content: space-between;
     padding: 0 18px;
     box-sizing: border-box;
+    border: 1px solid rgba(224, 224, 224, 0.507);
 }
+
 .header-conteudos-left {
     display: flex;
     align-items: center;
     gap: 0;
     margin: 35px;
+    border: 1px solid rgb(231, 231, 231);
 }
+
 .header-btn-quadrado {
     width: 44px;
     height: 44px;
     background: #fffffffa;
     color: #fff;
     border: none;
-    border-radius: 7px;
     font-size: 1.3rem;
     font-weight: bold;
-    margin-right: 0;
-    margin-left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -629,24 +651,27 @@ watch([precoSelecionado, ordemSelecionada, ordenarPorMaisRecentes], filtrarProdu
 }
 
 .header-btn-quadrado:hover {
-    filter: brightness(0.8);
+    filter: brightness(0.92);
 }
+
 .header-conteudos-right {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .header-label {
     color: #000000;
     font-size: 1rem;
     font-weight: 500;
 }
+
 .header-select {
     padding: 7px 12px 7px 12px;
     border-radius: 6px;
     border: 1px solid #bdbdbd;
     font-size: 1rem;
-    background: #fff;
+    background: #eeeeee;
     color: #222;
     outline: none;
 }
